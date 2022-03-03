@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+  head
+    title Jade
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+  body
+    #container.col.mt-4
+      h3 Jade - node template engine
+      .row
+        .col-md-6
+          form(action='/blog/upload' method='post' enctype='multipart/form-data')
+            .form-group
+              input.form-control(type='text' name='title' placeholder='Title')
+            .form-group
+              input(type='file' name='blogimage')
+            button.btn.btn-success(type='submit') Upload
